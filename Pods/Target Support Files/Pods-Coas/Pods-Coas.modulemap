@@ -1,0 +1,6 @@
+framework module Pods_Coas {
+  umbrella header "Pods-Coas-umbrella.h"
+
+  export *
+  module * { export * }
+}
