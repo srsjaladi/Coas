@@ -61,6 +61,14 @@
 		556F2FC22109A42E00611E66 /* Coas */ = {
 			isa = PBXGroup;
 			children = (
+				556F2FDC2109A63000611E66 /* Storyboards */,
+				556F2FDB2109A62B00611E66 /* Views */,
+				556F2FDA2109A62500611E66 /* Cells */,
+				556F2FD92109A61B00611E66 /* ViewControllers */,
+				556F2FD82109A61000611E66 /* Extensions */,
+				556F2FD72109A60800611E66 /* Model */,
+				556F2FD62109A60100611E66 /* Services */,
+				556F2FD52109A5F200611E66 /* Resources */,
 				556F2FC32109A42E00611E66 /* AppDelegate.swift */,
 				556F2FC52109A42E00611E66 /* ViewController.swift */,
 				556F2FC72109A42E00611E66 /* Main.storyboard */,
@@ -69,6 +77,62 @@
 				556F2FCF2109A42F00611E66 /* Info.plist */,
 			);
 			path = Coas;
+			sourceTree = "<group>";
+		};
+		556F2FD52109A5F200611E66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		556F2FD62109A60100611E66 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		556F2FD72109A60800611E66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		556F2FD82109A61000611E66 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		556F2FD92109A61B00611E66 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		556F2FDA2109A62500611E66 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		556F2FDB2109A62B00611E66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		556F2FDC2109A63000611E66 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		90DB8551DDFB37EEA8CDCA2A /* Pods */ = {
@@ -349,7 +413,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CU8MWCVTZH;
 				INFOPLIST_FILE = Coas/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Coas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -365,7 +432,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CU8MWCVTZH;
 				INFOPLIST_FILE = Coas/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Coas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
