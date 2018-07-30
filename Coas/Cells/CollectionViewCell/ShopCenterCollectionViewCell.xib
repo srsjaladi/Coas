@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Medium.ttf">
+            <string>Oswald-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCenterCollectionViewCell" id="gTV-IL-0wX" customClass="ShopCenterCollectionViewCell" customModule="Coas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rent" translatesAutoresizingMaskIntoConstraints="NO" id="qWq-9w-m0M">
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCN-KW-YQG">
+                        <rect key="frame" x="0.0" y="105" width="130" height="25"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.609925176056338" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="mLx-1p-qpm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="LCN-KW-YQG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2wt-eo-OtI"/>
+                <constraint firstAttribute="bottom" secondItem="LCN-KW-YQG" secondAttribute="bottom" id="7Ed-N0-OTE"/>
+                <constraint firstAttribute="trailing" secondItem="LCN-KW-YQG" secondAttribute="trailing" id="Bre-Ya-RDV"/>
+                <constraint firstItem="qWq-9w-m0M" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="G8w-qj-Dsu"/>
+                <constraint firstItem="qWq-9w-m0M" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PS1-nv-oFZ"/>
+                <constraint firstAttribute="trailing" secondItem="qWq-9w-m0M" secondAttribute="trailing" id="rYM-W0-uFa"/>
+                <constraint firstAttribute="bottom" secondItem="qWq-9w-m0M" secondAttribute="bottom" id="ylm-Kv-ekd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="ImgProfile" destination="qWq-9w-m0M" id="X9t-0A-MiW"/>
+                <outlet property="lblItems" destination="LCN-KW-YQG" id="Tg4-hW-pRN"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Rent" width="450" height="300"/>
+    </resources>
+</document>

@@ -12,12 +12,52 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var leftMenu : LeftMenuTVC?
+    static var appdelegate = AppDelegate()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        UITabBarItem.appearance()
+            .setTitleTextAttributes(
+                [NSAttributedStringKey.font: UIFont(name: "Oswald-Bold", size: 10)!],
+                for: .normal)
+        
+        
+        UINavigationBar.appearance().barStyle = .blackOpaque
+        
+        self.setStyles()
         return true
     }
+    
+    func setStyles() {
+        //NavBar Style
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: UIFont.dinProBold(20), NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().tintColor = UIColor.sandyBrownColor()
+        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(UIColor.whiteThree())
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().backgroundColor = UIColor.white
+        UINavigationBar.appearance().isTranslucent = false
+        
+        
+        
+        //BarButtonItem
+        var attributes = [ NSAttributedStringKey.font: UIFont.dinProMedium(17), NSAttributedStringKey.foregroundColor: UIColor.oldPinkColor()]
+        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: UIControlState())
+        attributes = [ NSAttributedStringKey.font: UIFont.dinProMedium(17), NSAttributedStringKey.foregroundColor: UIColor.oldPinkColor()]
+        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .disabled)
+        
+        UIRefreshControl.appearance().tintColor = UIColor.sandyBrownColor()
+        
+        if #available(iOS 10.0, *) {
+            UITabBar.appearance().unselectedItemTintColor = UIColor.black
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -40,7 +80,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    func goToHome(_ animated: Bool?, afterLaunchScreen: Bool = false)
+    {
+        
+        let leftMenuTVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LeftMenuTVC") as! LeftMenuTVC
+        
+        var middleVC : UIViewController
+        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        middleVC = vc
+        
+        self.leftMenu = leftMenuTVC
+        let navigationController = UINavigationController(rootViewController: middleVC)
+        
+        let slideMenuController = SlideMenuController(mainViewController:navigationController, leftMenuViewController:  self.leftMenu! )
+        if ((animated) != nil) {
+            UIView.transition(with: self.window!, duration: 0.3, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
+                self.window?.rootViewController = slideMenuController
+            }, completion: nil)
+        }
+        else {
+            self.window?.rootViewController = slideMenuController
+        }
+        self.window?.backgroundColor = UIColor.white
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func goToLogin(_ animated: Bool) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! UINavigationController
+        
+        if (animated) {
+            UIView.transition(with: self.window!, duration: 0.3, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
+                self.window?.rootViewController = vc
+            }, completion: nil)
+        }else{
+            UIView.transition(with: self.window!, duration: 0.3, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+                self.window?.rootViewController = vc
+            }, completion: nil)
+        }
+        
+    }
+    
+    
+    static func appDelegate() -> AppDelegate{
+        DispatchQueue.main.async() {
+            appdelegate = UIApplication.shared.delegate as! AppDelegate
+        }
+        return appdelegate
+    }
 
+    
+    func disableLeftSlide( _ shouldDisable : Bool ) {
+        
+        (self.window?.rootViewController as? SlideMenuController)?.disableLeftSlide(shouldDisable)
+    }
 
 }
 

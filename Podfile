@@ -7,5 +7,10 @@ target 'Coas' do
 
   # Pods for Coas
 pod 'AFNetworking', '0.9.1'
+pod 'Alamofire', '~> 4.7.3'
+pod 'AlamofireImage', '~> 3.3.1'
+pod 'MBProgressHUD', '~> 0.9.2'
+pod 'ReachabilitySwift', '~> 3'
+pod 'SwiftyJSON', '~> 3.0.0'
 
 end
