@@ -50,7 +50,11 @@
                                                             <constraint firstAttribute="height" constant="30" id="oQ5-Ds-AEJ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="20"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Login/Sign in">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <state key="selected">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -94,7 +98,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3U-cR-Htm">
                                                 <rect key="frame" x="0.0" y="44" width="288" height="167"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnH-Sn-fan">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnH-Sn-fan">
                                                         <rect key="frame" x="8" y="11" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="Ebn-cB-WPp"/>
@@ -102,6 +106,11 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="uZv-qE-1oQ"/>
                                                         </connections>
@@ -113,7 +122,7 @@
                                                             <constraint firstAttribute="height" constant="2" id="7Hg-Ds-ya2"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZK-3p-h53">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZK-3p-h53">
                                                         <rect key="frame" x="8" y="59" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="V1U-J7-d7l"/>
@@ -121,6 +130,11 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="tBX-fC-tdf"/>
                                                         </connections>
@@ -166,12 +180,16 @@
                                                 <rect key="frame" x="0.0" y="206" width="288" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yo-0A-cy8">
-                                                        <rect key="frame" x="0.0" y="10" width="71" height="28"/>
+                                                        <rect key="frame" x="0.0" y="10" width="61" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="28" id="7gd-Oo-x1g"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="20"/>
-                                                        <state key="normal" title="REGISTER">
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Register">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <state key="selected" title="Register">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -199,7 +217,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npM-fS-c42">
                                                 <rect key="frame" x="0.0" y="251" width="288" height="363"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPs-J7-pyy">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Firstname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPs-J7-pyy">
                                                         <rect key="frame" x="8" y="8" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="9UT-1a-GL8"/>
@@ -207,6 +225,11 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="cl5-oA-ZgZ"/>
                                                         </connections>
@@ -218,7 +241,7 @@
                                                             <constraint firstAttribute="height" constant="2" id="yR6-DJ-rhg"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXw-0t-gEO">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lastname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXw-0t-gEO">
                                                         <rect key="frame" x="8" y="50" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="B0n-pY-Zm6"/>
@@ -226,6 +249,11 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="QuJ-xq-RlW"/>
                                                         </connections>
@@ -237,14 +265,19 @@
                                                             <constraint firstAttribute="height" constant="2" id="iLG-h3-Ojh"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvE-Eb-IWo">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvE-Eb-IWo">
                                                         <rect key="frame" x="8" y="92" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="HX2-ig-rEn"/>
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="ELQ-tA-rOB"/>
                                                         </connections>
@@ -256,14 +289,19 @@
                                                             <constraint firstAttribute="height" constant="2" id="d4z-fE-8UO"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-4x-6i1">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-4x-6i1">
                                                         <rect key="frame" x="8" y="134" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="zGw-Er-MMC"/>
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="6C2-7A-ROi"/>
                                                         </connections>
@@ -275,14 +313,19 @@
                                                             <constraint firstAttribute="height" constant="2" id="p0f-ch-h52"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBz-OK-Uam">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBz-OK-Uam">
                                                         <rect key="frame" x="8" y="176" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="LPP-dM-KF7"/>
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="o1S-lA-n8L"/>
                                                         </connections>
@@ -294,14 +337,19 @@
                                                             <constraint firstAttribute="height" constant="2" id="Er7-PC-TNn"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1E3-Bo-BUG">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1E3-Bo-BUG">
                                                         <rect key="frame" x="8" y="219" width="272" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="SVw-rm-O2D"/>
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="pJA-rL-Cwt"/>
                                                         </connections>
@@ -372,13 +420,26 @@
                                             <constraint firstAttribute="width" constant="288" id="nwR-ku-ZxR"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fD-gh-JH5">
+                                        <rect key="frame" x="23" y="28" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="QbI-ug-IRo"/>
+                                            <constraint firstAttribute="width" constant="35" id="pNS-VD-7xy"/>
+                                        </constraints>
+                                        <state key="normal" image="LeftArrowIcon"/>
+                                        <connections>
+                                            <action selector="btnBackBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxX-ex-Mfr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="MiU-gB-5gl" secondAttribute="trailing" constant="43" id="10F-HL-eUH"/>
                                     <constraint firstItem="zcr-ch-Cmq" firstAttribute="centerX" secondItem="QbR-Z4-DvF" secondAttribute="centerX" id="2gb-GO-qAj"/>
+                                    <constraint firstItem="7fD-gh-JH5" firstAttribute="top" secondItem="QbR-Z4-DvF" secondAttribute="top" constant="28" id="GBH-5u-FmC"/>
                                     <constraint firstItem="zcr-ch-Cmq" firstAttribute="top" secondItem="QbR-Z4-DvF" secondAttribute="top" constant="70" id="Ytn-DG-hbE"/>
                                     <constraint firstAttribute="bottom" secondItem="MiU-gB-5gl" secondAttribute="bottom" id="ZrA-Mn-hcZ"/>
                                     <constraint firstItem="MiU-gB-5gl" firstAttribute="centerX" secondItem="QbR-Z4-DvF" secondAttribute="centerX" id="cqc-cq-HGl"/>
+                                    <constraint firstItem="7fD-gh-JH5" firstAttribute="leading" secondItem="QbR-Z4-DvF" secondAttribute="leading" constant="23" id="j9O-Mk-CA4"/>
                                     <constraint firstItem="MiU-gB-5gl" firstAttribute="top" secondItem="zcr-ch-Cmq" secondAttribute="bottom" constant="30" id="tny-3g-57K"/>
                                 </constraints>
                             </scrollView>
@@ -400,6 +461,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="ViewSignIn" destination="3ju-0h-xtd" id="Udl-WP-8PK"/>
+                        <outlet property="btnBackBtn" destination="7fD-gh-JH5" id="U92-d6-Pup"/>
                         <outlet property="btnCantSignin" destination="Wph-4u-9T1" id="ki6-xR-w1v"/>
                         <outlet property="btnRegister" destination="8yo-0A-cy8" id="Dmg-Bz-z3z"/>
                         <outlet property="btnSignin" destination="Uer-Uf-cqt" id="ErS-5k-Faz"/>
@@ -435,6 +497,7 @@
     </scenes>
     <resources>
         <image name="LaunchScreen" width="360" height="640"/>
+        <image name="LeftArrowIcon" width="32" height="32"/>
         <image name="rightArrowBtn" width="32" height="32"/>
     </resources>
 </document>

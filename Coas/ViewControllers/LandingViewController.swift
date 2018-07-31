@@ -11,6 +11,7 @@ import UIKit
 class LandingViewController: UIViewController {
     
     @IBOutlet weak var btnSignin: UIButton!
+    @IBOutlet weak var btnBackBtn: UIButton!
     @IBOutlet weak var btnRegister: UIButton!
     @IBOutlet weak var ViewSignIn: UIView!
     @IBOutlet weak var viewSignin2: UIView!
@@ -27,6 +28,7 @@ class LandingViewController: UIViewController {
         
         viewSignin2.isHidden = true
         viewRegister2.isHidden = true
+        btnBackBtn.isHidden = true
     
     }
     
@@ -64,6 +66,7 @@ class LandingViewController: UIViewController {
         btnTopLogin.isSelected = !btnTopLogin.isSelected
         
         if btnTopLogin.isSelected {
+           
             let transition = CATransition()
             transition.type = kCATransitionPush
             transition.duration = 0.9
@@ -71,6 +74,7 @@ class LandingViewController: UIViewController {
             self.viewSignin2.layer.add(transition, forKey: nil)
             viewSignin2.isHidden = false
             viewRegister2.isHidden = true
+            btnBackBtn.isHidden = true
         }
        
     }
@@ -89,16 +93,49 @@ class LandingViewController: UIViewController {
             transition.subtype = kCATransitionFromLeft
             self.viewRegister2.layer.add(transition, forKey: nil)
             viewRegister2.isHidden = false
+            btnBackBtn.isHidden = false
             viewRegister.isHidden = true
             viewSignin2.isHidden = true
             ViewSignIn.isHidden = true
+            
+            CATransaction.begin()
+            CATransaction.setCompletionBlock {
+                
+                self.btnBackBtn.isHidden = false
+            }
         }
+        
+        
     }
     
+
     
-    
-    
-    
+    @IBAction func btnBackBtnClicked(_ sender: Any) {
+       
+        self.btnTopRegister.isSelected = false
+        self.btnTopLogin.isSelected = false
+       
+       
+        self.view.endEditing(true)
+        let transition = CATransition()
+        transition.type = kCATransitionPush
+        transition.duration = 0.8
+        transition.subtype = kCATransitionFromRight
+        self.viewRegister2.layer.add(transition, forKey: nil)
+        self.viewRegister2.isHidden = true
+        
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock {
+            
+            self.viewRegister.isHidden = false
+            self.ViewSignIn.isHidden = false
+            self.viewSignin2.isHidden = true
+            self.btnBackBtn.isHidden = true
+            
+        }
+        
+    }
     
     
     

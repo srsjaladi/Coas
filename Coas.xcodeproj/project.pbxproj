@@ -14,6 +14,7 @@
 		553669D5210F758E00E80E2C /* RentingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553669D3210F758E00E80E2C /* RentingTableViewCell.xib */; };
 		553669D8210F83BB00E80E2C /* ShopCenterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553669D6210F83BB00E80E2C /* ShopCenterCollectionViewCell.swift */; };
 		553669D9210F83BB00E80E2C /* ShopCenterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553669D7210F83BB00E80E2C /* ShopCenterCollectionViewCell.xib */; };
+		55536BBD21105CF30067F56A /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BBC21105CF20067F56A /* ALChatManager.swift */; };
 		556F2FC42109A42E00611E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F2FC32109A42E00611E66 /* AppDelegate.swift */; };
 		556F2FC92109A42E00611E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556F2FC72109A42E00611E66 /* Main.storyboard */; };
 		556F2FCB2109A42F00611E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556F2FCA2109A42F00611E66 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		553669D3210F758E00E80E2C /* RentingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentingTableViewCell.xib; sourceTree = "<group>"; };
 		553669D6210F83BB00E80E2C /* ShopCenterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCenterCollectionViewCell.swift; sourceTree = "<group>"; };
 		553669D7210F83BB00E80E2C /* ShopCenterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCenterCollectionViewCell.xib; sourceTree = "<group>"; };
+		55536BBC21105CF20067F56A /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
 		556F2FC02109A42E00611E66 /* Coas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556F2FC32109A42E00611E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556F2FC82109A42E00611E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 				553669D7210F83BB00E80E2C /* ShopCenterCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		55536BBB21105CD20067F56A /* ChatFiles */ = {
+			isa = PBXGroup;
+			children = (
+				55536BBC21105CF20067F56A /* ALChatManager.swift */,
+			);
+			path = ChatFiles;
 			sourceTree = "<group>";
 		};
 		556F2FB72109A42E00611E66 = {
@@ -292,6 +302,7 @@
 		55ED218A210C4F1C00AF41D0 /* ConstantFiles */ = {
 			isa = PBXGroup;
 			children = (
+				55536BBB21105CD20067F56A /* ChatFiles */,
 				55ED2192210C4F5300AF41D0 /* Libraries */,
 				55ED218B210C4F4900AF41D0 /* KeyboardScrollVew */,
 			);
@@ -441,8 +452,10 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Applozic/Applozic.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -450,8 +463,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Applozic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +507,7 @@
 				55ED21A8210C595C00AF41D0 /* MessageViewController.swift in Sources */,
 				553669D0210F728500E80E2C /* ChatTableViewCell.swift in Sources */,
 				55ED21A1210C533600AF41D0 /* UIImageView+CoasHelper.swift in Sources */,
+				55536BBD21105CF30067F56A /* ALChatManager.swift in Sources */,
 				553669D4210F758E00E80E2C /* RentingTableViewCell.swift in Sources */,
 				55ED21AE210C59C300AF41D0 /* ProfileViewController.swift in Sources */,
 				55ED21A6210C594500AF41D0 /* HomeViewController.swift in Sources */,
