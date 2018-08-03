@@ -16,7 +16,7 @@ class RentingViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setNeedsStatusBarAppearanceUpdate()
         // Do any additional setup after loading the view.
           self.tblView.register(UINib(nibName: "\(RentingTableViewCell.self)", bundle: nil), forCellReuseIdentifier: kReuseTableCellID)
     }
@@ -57,11 +57,15 @@ class RentingViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
     }
     
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+        let homeStoryboard = UIStoryboard(name: "Other", bundle: nil)
+        let rentDetailsVC = homeStoryboard.instantiateViewController(withIdentifier: "RentDetailsViewController") as! RentDetailsViewController
+        self.navigationController?.pushViewController(rentDetailsVC, animated: true)
     }
     
     // MARK: - UIButton Action Methods

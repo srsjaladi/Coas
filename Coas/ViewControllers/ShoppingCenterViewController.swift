@@ -17,7 +17,7 @@ class ShoppingCenterViewController: UIViewController,UICollectionViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         setNeedsStatusBarAppearanceUpdate()
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: (self.view.frame.width - 10)/3, height: 130.0)
@@ -67,6 +67,10 @@ class ShoppingCenterViewController: UIViewController,UICollectionViewDelegate, U
         
         return CGSize(width: (self.view.frame.width - 10)/3 , height: 130.0)
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: - UIButton Action Methods

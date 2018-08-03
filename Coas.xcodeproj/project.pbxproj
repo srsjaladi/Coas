@@ -15,10 +15,23 @@
 		553669D8210F83BB00E80E2C /* ShopCenterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553669D6210F83BB00E80E2C /* ShopCenterCollectionViewCell.swift */; };
 		553669D9210F83BB00E80E2C /* ShopCenterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553669D7210F83BB00E80E2C /* ShopCenterCollectionViewCell.xib */; };
 		55536BBD21105CF30067F56A /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BBC21105CF20067F56A /* ALChatManager.swift */; };
+		55536BBF2110B9DC0067F56A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BBE2110B9DC0067F56A /* User.swift */; };
+		55536BC12110B9E10067F56A /* User+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BC02110B9E10067F56A /* User+Serializable.swift */; };
+		55536BC32110B9E80067F56A /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BC22110B9E80067F56A /* CurrentUser.swift */; };
+		55536BC52110B9ED0067F56A /* CurrentUser+Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BC42110B9ED0067F56A /* CurrentUser+Manager.swift */; };
+		55536BC82110BA160067F56A /* ConstantsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BC72110BA160067F56A /* ConstantsAPI.swift */; };
+		55536BCB2110BA490067F56A /* CoasAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BC92110BA490067F56A /* CoasAPI.swift */; };
+		55536BCC2110BA490067F56A /* CoasError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55536BCA2110BA490067F56A /* CoasError.swift */; };
 		556F2FC42109A42E00611E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F2FC32109A42E00611E66 /* AppDelegate.swift */; };
 		556F2FC92109A42E00611E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556F2FC72109A42E00611E66 /* Main.storyboard */; };
 		556F2FCB2109A42F00611E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556F2FCA2109A42F00611E66 /* Assets.xcassets */; };
 		556F2FCE2109A42F00611E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556F2FCC2109A42F00611E66 /* LaunchScreen.storyboard */; };
+		55AF087F21117C1D004B6C23 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF087E21117C1D004B6C23 /* UserInfo.swift */; };
+		55AF08812111990C004B6C23 /* UIViewController+CoasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF08802111990C004B6C23 /* UIViewController+CoasHelper.swift */; };
+		55AF08832111C8CE004B6C23 /* FakeLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AF08822111C8CE004B6C23 /* FakeLaunch.storyboard */; };
+		55AF08852111C8E1004B6C23 /* FakeLaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF08842111C8E1004B6C23 /* FakeLaunchScreenVC.swift */; };
+		55AF088721122182004B6C23 /* RentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF088621122182004B6C23 /* RentDetailsViewController.swift */; };
+		55AF088921122CA3004B6C23 /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF088821122CA3004B6C23 /* RoomDetailsViewController.swift */; };
 		55E865CD210B8C2300A80ECA /* Oswald-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55E865B9210B8C2300A80ECA /* Oswald-HeavyItalic.ttf */; };
 		55E865CE210B8C2300A80ECA /* Oswald-Stencil.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55E865BA210B8C2300A80ECA /* Oswald-Stencil.ttf */; };
 		55E865CF210B8C2300A80ECA /* Oswald-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55E865BB210B8C2300A80ECA /* Oswald-LightItalic.ttf */; };
@@ -71,12 +84,26 @@
 		553669D6210F83BB00E80E2C /* ShopCenterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCenterCollectionViewCell.swift; sourceTree = "<group>"; };
 		553669D7210F83BB00E80E2C /* ShopCenterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCenterCollectionViewCell.xib; sourceTree = "<group>"; };
 		55536BBC21105CF20067F56A /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
+		55536BBE2110B9DC0067F56A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		55536BC02110B9E10067F56A /* User+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Serializable.swift"; sourceTree = "<group>"; };
+		55536BC22110B9E80067F56A /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		55536BC42110B9ED0067F56A /* CurrentUser+Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrentUser+Manager.swift"; sourceTree = "<group>"; };
+		55536BC72110BA160067F56A /* ConstantsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAPI.swift; sourceTree = "<group>"; };
+		55536BC92110BA490067F56A /* CoasAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoasAPI.swift; sourceTree = "<group>"; };
+		55536BCA2110BA490067F56A /* CoasError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoasError.swift; sourceTree = "<group>"; };
 		556F2FC02109A42E00611E66 /* Coas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556F2FC32109A42E00611E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556F2FC82109A42E00611E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		556F2FCA2109A42F00611E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		556F2FCD2109A42F00611E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		556F2FCF2109A42F00611E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55AF087E21117C1D004B6C23 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		55AF08802111990C004B6C23 /* UIViewController+CoasHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoasHelper.swift"; sourceTree = "<group>"; };
+		55AF08822111C8CE004B6C23 /* FakeLaunch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FakeLaunch.storyboard; sourceTree = "<group>"; };
+		55AF08842111C8E1004B6C23 /* FakeLaunchScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeLaunchScreenVC.swift; sourceTree = "<group>"; };
+		55AF088621122182004B6C23 /* RentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentDetailsViewController.swift; sourceTree = "<group>"; };
+		55AF088821122CA3004B6C23 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
+		55AF088A2112329E004B6C23 /* Coas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coas.entitlements; sourceTree = "<group>"; };
 		55E865B9210B8C2300A80ECA /* Oswald-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-HeavyItalic.ttf"; sourceTree = "<group>"; };
 		55E865BA210B8C2300A80ECA /* Oswald-Stencil.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Stencil.ttf"; sourceTree = "<group>"; };
 		55E865BB210B8C2300A80ECA /* Oswald-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -160,6 +187,16 @@
 			path = ChatFiles;
 			sourceTree = "<group>";
 		};
+		55536BC62110BA0D0067F56A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				55536BC92110BA490067F56A /* CoasAPI.swift */,
+				55536BCA2110BA490067F56A /* CoasError.swift */,
+				55536BC72110BA160067F56A /* ConstantsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		556F2FB72109A42E00611E66 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +218,7 @@
 		556F2FC22109A42E00611E66 /* Coas */ = {
 			isa = PBXGroup;
 			children = (
+				55AF088A2112329E004B6C23 /* Coas.entitlements */,
 				556F2FDC2109A63000611E66 /* Storyboards */,
 				556F2FDB2109A62B00611E66 /* Views */,
 				556F2FDA2109A62500611E66 /* Cells */,
@@ -191,7 +229,6 @@
 				556F2FD52109A5F200611E66 /* Resources */,
 				556F2FC32109A42E00611E66 /* AppDelegate.swift */,
 				556F2FCA2109A42F00611E66 /* Assets.xcassets */,
-				556F2FCC2109A42F00611E66 /* LaunchScreen.storyboard */,
 				556F2FCF2109A42F00611E66 /* Info.plist */,
 			);
 			path = Coas;
@@ -209,6 +246,7 @@
 		556F2FD62109A60100611E66 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				55536BC62110BA0D0067F56A /* API */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -216,6 +254,11 @@
 		556F2FD72109A60800611E66 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55536BBE2110B9DC0067F56A /* User.swift */,
+				55536BC02110B9E10067F56A /* User+Serializable.swift */,
+				55AF087E21117C1D004B6C23 /* UserInfo.swift */,
+				55536BC22110B9E80067F56A /* CurrentUser.swift */,
+				55536BC42110B9ED0067F56A /* CurrentUser+Manager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +266,7 @@
 		556F2FD82109A61000611E66 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				55AF08802111990C004B6C23 /* UIViewController+CoasHelper.swift */,
 				55ED219B210C533600AF41D0 /* MBProgressHUD+CoasHelper.swift */,
 				55ED219F210C533600AF41D0 /* UIColor+CoasColors.swift */,
 				55ED219D210C533600AF41D0 /* UIFont+CoasFonts.swift */,
@@ -235,12 +279,15 @@
 		556F2FD92109A61B00611E66 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				55AF08842111C8E1004B6C23 /* FakeLaunchScreenVC.swift */,
 				55ED2188210C492B00AF41D0 /* LandingViewController.swift */,
 				55ED21A5210C594500AF41D0 /* HomeViewController.swift */,
 				55ED21A7210C595C00AF41D0 /* MessageViewController.swift */,
 				55ED21A9210C596F00AF41D0 /* RentingViewController.swift */,
 				55ED21AB210C597F00AF41D0 /* ShoppingCenterViewController.swift */,
 				55ED21AD210C59C300AF41D0 /* ProfileViewController.swift */,
+				55AF088621122182004B6C23 /* RentDetailsViewController.swift */,
+				55AF088821122CA3004B6C23 /* RoomDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -264,9 +311,11 @@
 		556F2FDC2109A63000611E66 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				55AF08822111C8CE004B6C23 /* FakeLaunch.storyboard */,
 				556F2FC72109A42E00611E66 /* Main.storyboard */,
 				55ED21B3210CDA3200AF41D0 /* Home.storyboard */,
 				553669CA210F69DC00E80E2C /* Other.storyboard */,
+				556F2FCC2109A42F00611E66 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -382,6 +431,14 @@
 				TargetAttributes = {
 					556F2FBF2109A42E00611E66 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -431,6 +488,7 @@
 				55E865D4210B8C2300A80ECA /* DINPro-Black.otf in Resources */,
 				55E865D8210B8C2300A80ECA /* Oswald-Heavy.ttf in Resources */,
 				55E865DB210B8C2300A80ECA /* Oswald-RegularItalic.ttf in Resources */,
+				55AF08832111C8CE004B6C23 /* FakeLaunch.storyboard in Resources */,
 				55E865DF210B8C2300A80ECA /* Oswald-Light.ttf in Resources */,
 				55E865CF210B8C2300A80ECA /* Oswald-LightItalic.ttf in Resources */,
 				553669D5210F758E00E80E2C /* RentingTableViewCell.xib in Resources */,
@@ -499,10 +557,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AF088921122CA3004B6C23 /* RoomDetailsViewController.swift in Sources */,
 				553669D8210F83BB00E80E2C /* ShopCenterCollectionViewCell.swift in Sources */,
 				55ED21A0210C533600AF41D0 /* MBProgressHUD+CoasHelper.swift in Sources */,
 				55ED2189210C492B00AF41D0 /* LandingViewController.swift in Sources */,
+				55536BC12110B9E10067F56A /* User+Serializable.swift in Sources */,
 				55ED219A210C4F6100AF41D0 /* LeftMenuTVCell.swift in Sources */,
+				55536BC32110B9E80067F56A /* CurrentUser.swift in Sources */,
 				55ED2195210C4F5300AF41D0 /* SlideMenuController.swift in Sources */,
 				55ED21A8210C595C00AF41D0 /* MessageViewController.swift in Sources */,
 				553669D0210F728500E80E2C /* ChatTableViewCell.swift in Sources */,
@@ -512,15 +573,24 @@
 				55ED21AE210C59C300AF41D0 /* ProfileViewController.swift in Sources */,
 				55ED21A6210C594500AF41D0 /* HomeViewController.swift in Sources */,
 				55ED21A2210C533600AF41D0 /* UIFont+CoasFonts.swift in Sources */,
+				55AF08812111990C004B6C23 /* UIViewController+CoasHelper.swift in Sources */,
+				55536BC82110BA160067F56A /* ConstantsAPI.swift in Sources */,
+				55536BCB2110BA490067F56A /* CoasAPI.swift in Sources */,
 				55ED21A3210C533600AF41D0 /* UIView+Extensions.swift in Sources */,
+				55536BCC2110BA490067F56A /* CoasError.swift in Sources */,
 				55ED2196210C4F5300AF41D0 /* CAPSPageMenu.swift in Sources */,
 				55ED21A4210C533600AF41D0 /* UIColor+CoasColors.swift in Sources */,
 				55ED2191210C4F4900AF41D0 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				55ED21AA210C596F00AF41D0 /* RentingViewController.swift in Sources */,
+				55AF087F21117C1D004B6C23 /* UserInfo.swift in Sources */,
+				55536BC52110B9ED0067F56A /* CurrentUser+Manager.swift in Sources */,
 				55ED2190210C4F4900AF41D0 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				556F2FC42109A42E00611E66 /* AppDelegate.swift in Sources */,
 				55ED21AC210C597F00AF41D0 /* ShoppingCenterViewController.swift in Sources */,
+				55AF088721122182004B6C23 /* RentDetailsViewController.swift in Sources */,
 				55ED2199210C4F6100AF41D0 /* LeftMenuTVC.swift in Sources */,
+				55AF08852111C8E1004B6C23 /* FakeLaunchScreenVC.swift in Sources */,
+				55536BBF2110B9DC0067F56A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,9 +648,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Raitha Alsulaimani (787NX5GD2B)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = CU8MWCVTZH;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -638,9 +709,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Raitha Alsulaimani (CU8MWCVTZH)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = CU8MWCVTZH;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -665,17 +737,21 @@
 			baseConfigurationReference = FFB86217C59DB8123E71764A /* Pods-Coas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Coas/Coas.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Raitha Alsulaimani (787NX5GD2B)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = CU8MWCVTZH;
 				INFOPLIST_FILE = Coas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Coas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoasIOS.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2cd7eda2-f293-437f-845a-b2649891ac0f";
+				PROVISIONING_PROFILE_SPECIFIER = COAS_DEV;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -684,17 +760,21 @@
 			baseConfigurationReference = 2772F891253DBCC3B638A337 /* Pods-Coas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Coas/Coas.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Raitha Alsulaimani (CU8MWCVTZH)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = CU8MWCVTZH;
 				INFOPLIST_FILE = Coas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Coas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoasIOS.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "013f108b-93fb-462b-99af-6ae21e1d0f38";
+				PROVISIONING_PROFILE_SPECIFIER = COAS_PROD;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

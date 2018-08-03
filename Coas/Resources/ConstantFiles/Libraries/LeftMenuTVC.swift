@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 import MBProgressHUD
 
 private enum MenuOption: String {
@@ -39,21 +40,32 @@ class LeftMenuTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNeedsStatusBarAppearanceUpdate()
         self.customizeSlideMenu()
         self.profileImage.layer.cornerRadius = self.profileImage.frame.width/2;
         self.profileImage.layer.masksToBounds = true
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setNeedsStatusBarAppearanceUpdate()
         rowsList = self.availableMenu()
-        
+        if let imageURL = URL(string: (CurrentUser.sharedInstance.user?.image)!)
+        {
+            self.profileImage.af_setImage(
+                withURL: imageURL,
+                placeholderImage: UIImage(named: "DefaultImage"),
+                filter: nil,
+                imageTransition: .crossDissolve(0.3)
+            )
+        }
+        self.lblUserName.text = CurrentUser.sharedInstance.user?.firstName ?? ""
         self.tableView.reloadData()
-        hasToScroll()
-            }
+    }
     
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
@@ -100,11 +112,11 @@ class LeftMenuTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             self.slideMenuController()?.changeMainViewController(navigationController, close: true)
             break
         case .MyAccount:
-            self.closeLeft()
-            let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            self.myProfileVC = homeStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-            let navigationController = UINavigationController(rootViewController: self.myProfileVC)
-            self.slideMenuController()?.changeMainViewController(navigationController, close: true)
+//            self.closeLeft()
+//            let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            self.myProfileVC = homeStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+//            let navigationController = UINavigationController(rootViewController: self.myProfileVC)
+//            self.slideMenuController()?.changeMainViewController(navigationController, close: true)
             break
         case .LogOut:
             self.closeLeft()

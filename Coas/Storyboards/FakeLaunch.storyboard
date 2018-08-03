@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pWo-Oo-SHg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fake Launch ScreenVC-->
+        <scene sceneID="LJl-tp-tCu">
+            <objects>
+                <viewController storyboardIdentifier="FakeLaunchScreenVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pWo-Oo-SHg" customClass="FakeLaunchScreenVC" customModule="Coas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QOQ-6m-5tD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="8gn-Dd-Led">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_text" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-ci-eqv">
+                                <rect key="frame" x="120.5" y="225.5" width="134" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="5KN-Ub-c32"/>
+                                    <constraint firstAttribute="width" constant="134" id="ZXa-vC-qQT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gn-Dd-Led" firstAttribute="top" secondItem="QOQ-6m-5tD" secondAttribute="top" id="3ol-d1-COQ"/>
+                            <constraint firstAttribute="trailing" secondItem="8gn-Dd-Led" secondAttribute="trailing" id="4aF-JU-nkD"/>
+                            <constraint firstItem="Caa-ci-eqv" firstAttribute="centerY" secondItem="QOQ-6m-5tD" secondAttribute="centerY" constant="-81" id="8ed-fa-ins"/>
+                            <constraint firstItem="Caa-ci-eqv" firstAttribute="centerX" secondItem="QOQ-6m-5tD" secondAttribute="centerX" id="BbC-Kj-rGA"/>
+                            <constraint firstAttribute="bottom" secondItem="8gn-Dd-Led" secondAttribute="bottom" id="Ex2-yF-wEU"/>
+                            <constraint firstItem="8gn-Dd-Led" firstAttribute="leading" secondItem="QOQ-6m-5tD" secondAttribute="leading" id="Mw8-KB-2FY"/>
+                            <constraint firstItem="8gn-Dd-Led" firstAttribute="leading" secondItem="QOQ-6m-5tD" secondAttribute="leading" id="QAN-xa-QOy"/>
+                            <constraint firstAttribute="bottom" secondItem="8gn-Dd-Led" secondAttribute="bottom" id="URZ-2N-3c9"/>
+                            <constraint firstAttribute="trailing" secondItem="8gn-Dd-Led" secondAttribute="trailing" id="gFI-4b-wNW"/>
+                            <constraint firstItem="8gn-Dd-Led" firstAttribute="top" secondItem="QOQ-6m-5tD" secondAttribute="top" id="idN-i9-bEu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IDX-fV-HEz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGh-Zk-Rfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchScreen" width="360" height="640"/>
+        <image name="app_text" width="134" height="54"/>
+    </resources>
+</document>

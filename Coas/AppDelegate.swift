@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Applozic
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,19 +19,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        CurrentUser.sharedInstance.load()
+    
+        ALApplozicSettings.setColorForSendMessages(UIColor(red: 213/255, green: 0.0/255, blue: 0.0/255, alpha:1))
+        ALApplozicSettings.setColorForReceiveMessages(UIColor(red: 255.0/255, green: 255.0/255, blue: 255.0/255, alpha:1))
+        ALApplozicSettings.setUserProfileHidden(false)
+        ALApplozicSettings.hideRefreshButton(false)
+        ALApplozicSettings.setStatusBarBGColor(UIColor.black)
+        ALApplozicSettings.setStatusBarStyle(UIStatusBarStyle.lightContent)
+        ALApplozicSettings.setMsgTextViewBGColor(UIColor.clear)
+        ALApplozicSettings.setTitleForConversationScreen("CHATS")
+        ALApplozicSettings.setGroupOption(false)
+        ALUserDefaultsHandler.setBottomTabBarHidden(false)
+        ALApplozicSettings.setColorForNavigationItem(UIColor.white)
+        ALApplozicSettings.setColorForNavigation(UIColor.clear)
+        ALApplozicSettings.setFontFace("Oswald-Medium")
+        ALApplozicSettings.setColorForSendButton(UIColor(red: 213/255, green: 0.0/255, blue: 0.0/255, alpha:1))
+        ALApplozicSettings.setDefaultGroupType(Int(PRIVATE.rawValue))
+        ALApplozicSettings.setAudioVideoEnabled(true)
+        ALApplozicSettings.setNotificationTitle("Chats")
+        ALApplozicSettings.setFilterContactsStatus(true)
+        //Register Notifications
+        let settings = UIUserNotificationSettings.init(types: [.alert, .badge, .sound], categories: nil)
+        UIApplication.shared.registerUserNotificationSettings(settings)
+        UIApplication.shared.registerForRemoteNotifications()
         
+        // Override point for customization after application launch.
+        let alApplocalNotificationHnadler : ALAppLocalNotifications =  ALAppLocalNotifications.appLocalNotificationHandler();
+        alApplocalNotificationHnadler.dataConnectionNotificationHandler();
+        
+        if (launchOptions != nil)
+        {
+            let dictionary = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
+            
+            if (dictionary != nil)
+            {
+                print("launched from push notification")
+                let alPushNotificationService: ALPushNotificationService = ALPushNotificationService()
+                
+                let appState: NSNumber = NSNumber(value: 0 as Int32)
+                let applozicProcessed = alPushNotificationService.processPushNotification(launchOptions,updateUI:appState)
+                if (!applozicProcessed)
+                {
+                    //Note: notification for app
+                }
+            }
+        }
         
         UITabBarItem.appearance()
             .setTitleTextAttributes(
                 [NSAttributedStringKey.font: UIFont(name: "Oswald-Bold", size: 10)!],
                 for: .normal)
-        
-        
+
+        UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barStyle = .blackOpaque
-        
         self.setStyles()
         return true
     }
+    
     
     func setStyles() {
         //NavBar Style
@@ -65,12 +111,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        print("APP_ENTER_IN_BACKGROUND")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "APP_ENTER_IN_BACKGROUND"), object: nil)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
+        ALPushNotificationService.applicationEntersForeground()
+        print("APP_ENTER_IN_FOREGROUND")
+        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "APP_ENTER_IN_FOREGROUND"), object: nil)
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -79,8 +131,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        ALDBHandler.sharedInstance().saveContext()
     }
     
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
+    {
+        
+        print("Device token data :: \(deviceToken.description)")
+        var deviceTokenString: String = ""
+        for i in 0..<deviceToken.count
+        {
+            deviceTokenString += String(format: "%02.2hhx", deviceToken[i] as CVarArg)
+        }
+        
+        print("Device token :: \(deviceTokenString)")
+        
+        if (ALUserDefaultsHandler.getApnDeviceToken() != deviceTokenString)
+        {
+            let alRegisterUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
+            alRegisterUserClientService.updateApnDeviceToken(withCompletion: deviceTokenString, withCompletion: { (response, error) in
+                if error != nil {
+                   
+                }
+                print("Registration Response :: \(response!)")
+            })
+        }
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+        print("Received notification :: \(userInfo.description)")
+        let alPushNotificationService: ALPushNotificationService = ALPushNotificationService()
+        alPushNotificationService.notificationArrived(to: application, with: userInfo)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        print("Received notification With Completion :: \(userInfo.description)")
+        let alPushNotificationService: ALPushNotificationService = ALPushNotificationService()
+        
+        alPushNotificationService.notificationArrived(to: application, with: userInfo)
+        completionHandler(UIBackgroundFetchResult.newData)
+    }
     
     func goToHome(_ animated: Bool?, afterLaunchScreen: Bool = false)
     {

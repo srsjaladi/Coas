@@ -7,75 +7,72 @@
 //
 
 import UIKit
-private let kReuseTableCellID = "ChatTableViewCell"
+import Applozic
 
-class MessageViewController: UIViewController,UITableViewDelegate, UITableViewDataSource  {
+class MessageViewController: UIViewController {
     
     
-    @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var chatContentView: UIView!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "CHATS"
+        self.navigationController?.navigationItem.title = "CHATS"
+         setNeedsStatusBarAppearanceUpdate()
+       
+        
+        // Add child view controller view to container
+        let story = UIStoryboard(name: "Applozic", bundle: Bundle(for: ALMessagesViewController.self))
+        let controller = story.instantiateViewController(withIdentifier: "ALViewController")
+        addChildViewController(controller)
+        chatContentView.frame = self.view.frame
+        controller.view.frame = self.view.frame
+        chatContentView.addSubview(controller.view)
+        controller.didMove(toParentViewController: self)
+        
+       
 
+        
         // Do any additional setup after loading the view.
-          self.tblView.register(UINib(nibName: "\(ChatTableViewCell.self)", bundle: nil), forCellReuseIdentifier: kReuseTableCellID)
     }
 
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - TableView Protocol
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 100.0
-    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
-        return 10
-    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: kReuseTableCellID, for: indexPath) as! ChatTableViewCell
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
        
-        return cell
-        
-        
     }
     
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-      
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
     }
     
-      // MARK: - UIButton Action Methods
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    // MARK: - UIButton Action Methods
     
     @IBAction func Menuclicked(_ sender: Any) {
         self.openLeft()
     }
     
+   
     @IBAction func SubMenuClicked(_ sender: Any) {
+        
     }
     
     @IBAction func btnAddClicked(_ sender: Any) {
+        
+       
+        
     }
     
 }
