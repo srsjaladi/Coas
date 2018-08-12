@@ -18,20 +18,24 @@ extension UIView {
 }
 
 extension UITextField {
-    
-    /// set icon of 20x20 with left padding of 8px
-    func setLeftIcon(_ icon: UIImage, textField: UITextField) {
-        
-        let leftImageView = UIImageView()
-        leftImageView.contentMode = .scaleAspectFit
-        let leftView = UIView()
-        leftView.frame = CGRect(x: 20, y: 0, width: 25, height: 20)
-        leftImageView.frame = CGRect(x: 0, y: 0, width: 15, height: 20)
-        leftImageView.image = icon
-        leftView.addSubview(leftImageView)
-        textField.rightViewMode = UITextFieldViewMode.always
-        textField.rightViewMode = .always
-        textField.rightView = leftView
+     @IBInspectable var setLeftIcon: UIImage? {
+        get
+        {
+            return UIImage(named: "DownArrow")
+        }
+        set
+        {
+            let leftImageView = UIImageView()
+            leftImageView.contentMode = .scaleAspectFit
+            let leftView = UIView()
+            leftView.frame = CGRect(x: 0, y: 0, width: 25, height: 20)
+            leftImageView.frame = CGRect(x: 0, y: 0, width: 15, height: 20)
+            leftImageView.image = setLeftIcon
+            leftView.addSubview(leftImageView)
+            self.rightViewMode = UITextFieldViewMode.always
+            self.rightViewMode = .always
+            self.rightView = leftView
+        }
     }
 }
 

@@ -12,6 +12,8 @@ pod 'AlamofireImage', '~> 3.3.1'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'ReachabilitySwift', '~> 3'
 pod 'SwiftyJSON', '~> 3.0.0'
-pod 'Applozic', '~> 5.10.0'
+pod 'Applozic', '~> 5.11.0'
+pod 'RKCardView'
+pod 'KTCenterFlowLayout'
 
 end

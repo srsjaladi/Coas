@@ -9,6 +9,7 @@
 import UIKit
 import AlamofireImage
 import MBProgressHUD
+import Applozic
 
 private enum MenuOption: String {
     case Home =  "HOME"
@@ -30,6 +31,7 @@ class LeftMenuTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     fileprivate var rowsList = [[MenuOption]]()
     var containerHomeVC: HomeViewController!
     var myProfileVC: ProfileViewController!
+    var bookingHistoryVC : BookingHistoryViewController!
     
 
     fileprivate var selectedMenu: MenuOption = .Home
@@ -108,15 +110,26 @@ class LeftMenuTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
             self.containerHomeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             let navigationController = UINavigationController(rootViewController: self.containerHomeVC)
-            navigationController.navigationItem.title = "My Profile"
             self.slideMenuController()?.changeMainViewController(navigationController, close: true)
             break
         case .MyAccount:
-//            self.closeLeft()
+            self.closeLeft()
+            let story = UIStoryboard(name: "Applozic", bundle: Bundle(for: ALChatViewController.self))
+            let controller = story.instantiateViewController(withIdentifier: "ALUserProfileView")
+            let navigationController = UINavigationController(rootViewController: controller)
+            self.slideMenuController()?.changeMainViewController(navigationController, close: true)
+            
 //            let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //            self.myProfileVC = homeStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
 //            let navigationController = UINavigationController(rootViewController: self.myProfileVC)
 //            self.slideMenuController()?.changeMainViewController(navigationController, close: true)
+            break
+        case .BookingHistory:
+            self.closeLeft()
+            let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            self.bookingHistoryVC = homeStoryboard.instantiateViewController(withIdentifier: "BookingHistoryViewController") as! BookingHistoryViewController
+            let navigationController = UINavigationController(rootViewController: self.bookingHistoryVC)
+            self.slideMenuController()?.changeMainViewController(navigationController, close: true)
             break
         case .LogOut:
             self.closeLeft()

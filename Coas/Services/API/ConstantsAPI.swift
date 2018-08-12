@@ -13,8 +13,10 @@ import Foundation
 
 let signUpPath = "register.php"
 let signInPath = "login.php"
-
-
+let getHistoryBRoomsPath = "room_book_history.php"
+let getRoomsPath = "get_rooms.php"
+let checkRoomAvailble = "check_room_available.php"
+let bookRoomPath = "book_room.php"
 
 
 

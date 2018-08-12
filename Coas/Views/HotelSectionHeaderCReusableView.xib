@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HotelSectionHeaderCReusableView" reuseIdentifier="HotelSectionHeaderCReusableView" id="U6b-Vx-4bR" customClass="HotelSectionHeaderCReusableView" customModule="Coas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSS-f3-pqL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rent" translatesAutoresizingMaskIntoConstraints="NO" id="AWN-eb-wTg">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AWN-eb-wTg" secondAttribute="bottom" id="DiG-bM-WKm"/>
+                        <constraint firstAttribute="trailing" secondItem="AWN-eb-wTg" secondAttribute="trailing" id="QNb-bc-LIf"/>
+                        <constraint firstItem="AWN-eb-wTg" firstAttribute="leading" secondItem="JSS-f3-pqL" secondAttribute="leading" id="WR6-SL-V4p"/>
+                        <constraint firstItem="AWN-eb-wTg" firstAttribute="top" secondItem="JSS-f3-pqL" secondAttribute="top" id="ucz-A8-D6g"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="JSS-f3-pqL" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="cIk-tv-Xtq"/>
+                <constraint firstAttribute="bottom" secondItem="JSS-f3-pqL" secondAttribute="bottom" id="rbt-sd-Feh"/>
+                <constraint firstItem="JSS-f3-pqL" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="uty-T2-NOe"/>
+                <constraint firstAttribute="trailing" secondItem="JSS-f3-pqL" secondAttribute="trailing" id="w0T-HD-AU4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="ImgView" destination="AWN-eb-wTg" id="Aa4-hf-P9y"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="Rent" width="450" height="300"/>
+    </resources>
+</document>

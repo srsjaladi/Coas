@@ -20,25 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         CurrentUser.sharedInstance.load()
-    
-        ALApplozicSettings.setColorForSendMessages(UIColor(red: 213/255, green: 0.0/255, blue: 0.0/255, alpha:1))
-        ALApplozicSettings.setColorForReceiveMessages(UIColor(red: 255.0/255, green: 255.0/255, blue: 255.0/255, alpha:1))
-        ALApplozicSettings.setUserProfileHidden(false)
-        ALApplozicSettings.hideRefreshButton(false)
-        ALApplozicSettings.setStatusBarBGColor(UIColor.black)
-        ALApplozicSettings.setStatusBarStyle(UIStatusBarStyle.lightContent)
-        ALApplozicSettings.setMsgTextViewBGColor(UIColor.clear)
-        ALApplozicSettings.setTitleForConversationScreen("CHATS")
-        ALApplozicSettings.setGroupOption(false)
-        ALUserDefaultsHandler.setBottomTabBarHidden(false)
-        ALApplozicSettings.setColorForNavigationItem(UIColor.white)
-        ALApplozicSettings.setColorForNavigation(UIColor.clear)
-        ALApplozicSettings.setFontFace("Oswald-Medium")
-        ALApplozicSettings.setColorForSendButton(UIColor(red: 213/255, green: 0.0/255, blue: 0.0/255, alpha:1))
-        ALApplozicSettings.setDefaultGroupType(Int(PRIVATE.rawValue))
-        ALApplozicSettings.setAudioVideoEnabled(true)
-        ALApplozicSettings.setNotificationTitle("Chats")
-        ALApplozicSettings.setFilterContactsStatus(true)
+      
         //Register Notifications
         let settings = UIUserNotificationSettings.init(types: [.alert, .badge, .sound], categories: nil)
         UIApplication.shared.registerUserNotificationSettings(settings)
@@ -81,19 +63,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setStyles() {
         //NavBar Style
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: UIFont.dinProBold(20), NSAttributedStringKey.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().tintColor = UIColor.sandyBrownColor()
-        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(UIColor.whiteThree())
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().backgroundColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().backgroundColor = UIColor.black
         UINavigationBar.appearance().isTranslucent = false
         
         
         
         //BarButtonItem
-        var attributes = [ NSAttributedStringKey.font: UIFont.dinProMedium(17), NSAttributedStringKey.foregroundColor: UIColor.oldPinkColor()]
-        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: UIControlState())
-        attributes = [ NSAttributedStringKey.font: UIFont.dinProMedium(17), NSAttributedStringKey.foregroundColor: UIColor.oldPinkColor()]
-        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .disabled)
+        let attributes = [ NSAttributedStringKey.font: UIFont.dinProMedium(17), NSAttributedStringKey.foregroundColor: UIColor.clear]
+        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: UIControlState.normal)
         
         UIRefreshControl.appearance().tintColor = UIColor.sandyBrownColor()
         

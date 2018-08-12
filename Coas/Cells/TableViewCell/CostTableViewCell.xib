@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseCostCellID" id="KGk-i7-Jjw" customClass="CostTableViewCell" customModule="Coas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNt-eA-2Eo">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Ndq-Pr-cKi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVV-ib-bsZ">
+                        <rect key="frame" x="160" y="0.0" width="160" height="50"/>
+                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVu-dV-V9u">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="49.5"/>
+                        <inset key="imageEdgeInsets" minX="130" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="selected" image="SelectedTick"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6S-NS-qkR">
+                        <rect key="frame" x="160" y="0.0" width="160" height="49.5"/>
+                        <inset key="imageEdgeInsets" minX="130" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="selected" image="SelectedTick"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zVV-ib-bsZ" secondAttribute="bottom" id="7E1-26-gf5"/>
+                    <constraint firstAttribute="bottom" secondItem="JVu-dV-V9u" secondAttribute="bottom" id="8au-v9-hyJ"/>
+                    <constraint firstItem="zVV-ib-bsZ" firstAttribute="width" secondItem="iNt-eA-2Eo" secondAttribute="width" id="Axb-X8-r6Z"/>
+                    <constraint firstItem="M6S-NS-qkR" firstAttribute="width" secondItem="JVu-dV-V9u" secondAttribute="width" id="DPq-8S-63o"/>
+                    <constraint firstItem="zVV-ib-bsZ" firstAttribute="height" secondItem="iNt-eA-2Eo" secondAttribute="height" id="GXJ-Vo-6oX"/>
+                    <constraint firstItem="zVV-ib-bsZ" firstAttribute="leading" secondItem="JVu-dV-V9u" secondAttribute="trailing" id="I9U-7C-wV5"/>
+                    <constraint firstAttribute="bottom" secondItem="M6S-NS-qkR" secondAttribute="bottom" id="JCO-OS-Lqz"/>
+                    <constraint firstItem="M6S-NS-qkR" firstAttribute="leading" secondItem="iNt-eA-2Eo" secondAttribute="trailing" id="Pcb-YO-C9k"/>
+                    <constraint firstItem="zVV-ib-bsZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Qg8-5G-DQy"/>
+                    <constraint firstItem="iNt-eA-2Eo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RgB-eQ-NMA"/>
+                    <constraint firstItem="M6S-NS-qkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Szl-HU-1b6"/>
+                    <constraint firstItem="JVu-dV-V9u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Zgu-PM-K6J"/>
+                    <constraint firstItem="M6S-NS-qkR" firstAttribute="height" secondItem="JVu-dV-V9u" secondAttribute="height" id="bpC-fd-Hqx"/>
+                    <constraint firstItem="zVV-ib-bsZ" firstAttribute="leading" secondItem="iNt-eA-2Eo" secondAttribute="trailing" id="oud-61-yGO"/>
+                    <constraint firstItem="JVu-dV-V9u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sLy-yo-ea1"/>
+                    <constraint firstAttribute="trailing" secondItem="zVV-ib-bsZ" secondAttribute="trailing" id="tbo-fF-mJf"/>
+                    <constraint firstAttribute="trailing" secondItem="M6S-NS-qkR" secondAttribute="trailing" id="uaa-bT-LqJ"/>
+                    <constraint firstAttribute="bottom" secondItem="iNt-eA-2Eo" secondAttribute="bottom" id="uid-c7-I07"/>
+                    <constraint firstItem="iNt-eA-2Eo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xCz-4W-Gr8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnHour" destination="JVu-dV-V9u" id="fRw-5J-h1w"/>
+                <outlet property="btnNight" destination="M6S-NS-qkR" id="IR4-k7-wPW"/>
+                <outlet property="lblHour" destination="iNt-eA-2Eo" id="Y68-Z5-hJA"/>
+                <outlet property="lblNight" destination="zVV-ib-bsZ" id="Hfj-dS-Gzz"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SelectedTick" width="20" height="14"/>
+    </resources>
+</document>

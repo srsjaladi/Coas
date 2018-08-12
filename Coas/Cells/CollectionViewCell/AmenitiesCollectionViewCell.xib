@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reuseAmenitiesCollectionCellID" id="gTV-IL-0wX" customClass="AmenitiesCollectionViewCell" customModule="Coas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXA-Zd-coK">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-gF-f2t">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oiO-gF-f2t" firstAttribute="top" secondItem="EXA-Zd-coK" secondAttribute="top" id="JXH-dO-0MJ"/>
+                            <constraint firstItem="oiO-gF-f2t" firstAttribute="leading" secondItem="EXA-Zd-coK" secondAttribute="leading" id="V0s-QQ-gMP"/>
+                            <constraint firstAttribute="trailing" secondItem="oiO-gF-f2t" secondAttribute="trailing" id="kdy-Us-3wR"/>
+                            <constraint firstAttribute="bottom" secondItem="oiO-gF-f2t" secondAttribute="bottom" id="sgB-Ak-xfG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="EXA-Zd-coK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="h0T-lE-a0t"/>
+                <constraint firstAttribute="trailing" secondItem="EXA-Zd-coK" secondAttribute="trailing" id="pD8-tV-ePt"/>
+                <constraint firstItem="EXA-Zd-coK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xO3-8s-TNo"/>
+                <constraint firstAttribute="bottom" secondItem="EXA-Zd-coK" secondAttribute="bottom" id="zfR-k3-GUw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="contentsView" destination="EXA-Zd-coK" id="baV-Bf-hXd"/>
+                <outlet property="imgView" destination="oiO-gF-f2t" id="J6l-9w-1oT"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
