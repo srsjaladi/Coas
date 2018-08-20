@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Medium.ttf">
+            <string>Oswald-Medium</string>
+        </array>
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddedRoomCollectionViewCell" customModule="Coas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6s-OA-ifT">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rent" translatesAutoresizingMaskIntoConstraints="NO" id="2Sd-iF-Ivd">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="130"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cB8-mY-cdG">
+                                <rect key="frame" x="0.0" y="130" width="170" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvh-uU-Id5">
+                                        <rect key="frame" x="8" y="5" width="35" height="24"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9g-pw-9lN">
+                                        <rect key="frame" x="8" y="34" width="114" height="28"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="p9g-pw-9lN" firstAttribute="leading" secondItem="cB8-mY-cdG" secondAttribute="leading" constant="8" id="3kc-Xy-Sgj"/>
+                                    <constraint firstItem="Hvh-uU-Id5" firstAttribute="leading" secondItem="cB8-mY-cdG" secondAttribute="leading" constant="8" id="SaW-ZH-0sX"/>
+                                    <constraint firstAttribute="height" constant="70" id="TeA-LX-KL0"/>
+                                    <constraint firstItem="Hvh-uU-Id5" firstAttribute="top" secondItem="cB8-mY-cdG" secondAttribute="top" constant="5" id="ck7-Ib-0s9"/>
+                                    <constraint firstAttribute="bottom" secondItem="p9g-pw-9lN" secondAttribute="bottom" constant="8" id="fd2-UM-Koj"/>
+                                    <constraint firstAttribute="trailing" secondItem="p9g-pw-9lN" secondAttribute="trailing" constant="48" id="mb3-7A-9DC"/>
+                                    <constraint firstItem="p9g-pw-9lN" firstAttribute="top" secondItem="Hvh-uU-Id5" secondAttribute="bottom" constant="5" id="tI0-vH-IQ1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4P-jB-fzu">
+                                <rect key="frame" x="0.0" y="95" width="170" height="35"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.26078203320503235" blue="0.26078203320503235" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kkV-qQ-zLm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cB8-mY-cdG" firstAttribute="leading" secondItem="Z6s-OA-ifT" secondAttribute="leading" id="6qG-u0-EJ0"/>
+                            <constraint firstAttribute="trailing" secondItem="m4P-jB-fzu" secondAttribute="trailing" id="MQq-zw-anL"/>
+                            <constraint firstItem="2Sd-iF-Ivd" firstAttribute="top" secondItem="Z6s-OA-ifT" secondAttribute="top" id="QtZ-xV-BO8"/>
+                            <constraint firstItem="cB8-mY-cdG" firstAttribute="top" secondItem="m4P-jB-fzu" secondAttribute="bottom" id="VaC-Om-la4"/>
+                            <constraint firstItem="cB8-mY-cdG" firstAttribute="top" secondItem="2Sd-iF-Ivd" secondAttribute="bottom" id="YQL-Jp-2XP"/>
+                            <constraint firstAttribute="bottom" secondItem="cB8-mY-cdG" secondAttribute="bottom" id="a8R-41-ZYB"/>
+                            <constraint firstItem="2Sd-iF-Ivd" firstAttribute="leading" secondItem="Z6s-OA-ifT" secondAttribute="leading" id="jF7-bF-iQv"/>
+                            <constraint firstItem="m4P-jB-fzu" firstAttribute="leading" secondItem="Z6s-OA-ifT" secondAttribute="leading" id="khs-mo-IkD"/>
+                            <constraint firstAttribute="trailing" secondItem="cB8-mY-cdG" secondAttribute="trailing" id="ntt-O3-cT1"/>
+                            <constraint firstAttribute="trailing" secondItem="2Sd-iF-Ivd" secondAttribute="trailing" id="tbI-9H-p5U"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Z6s-OA-ifT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2GY-Qz-N9g"/>
+                <constraint firstItem="Z6s-OA-ifT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5D8-lg-xkz"/>
+                <constraint firstAttribute="trailing" secondItem="Z6s-OA-ifT" secondAttribute="trailing" id="PPy-Pq-Eef"/>
+                <constraint firstAttribute="bottom" secondItem="Z6s-OA-ifT" secondAttribute="bottom" id="m4p-d6-aGJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="176" height="175"/>
+            <connections>
+                <outlet property="contentsView" destination="Z6s-OA-ifT" id="idI-cu-Krf"/>
+            </connections>
+            <point key="canvasLocation" x="120" y="132"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Rent" width="450" height="300"/>
+    </resources>
+</document>

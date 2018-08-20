@@ -32,6 +32,7 @@ class LeftMenuTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     var containerHomeVC: HomeViewController!
     var myProfileVC: ProfileViewController!
     var bookingHistoryVC : BookingHistoryViewController!
+    var addingRoomVc : AddingRoomViewController!
     
 
     fileprivate var selectedMenu: MenuOption = .Home
@@ -131,6 +132,12 @@ class LeftMenuTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             let navigationController = UINavigationController(rootViewController: self.bookingHistoryVC)
             self.slideMenuController()?.changeMainViewController(navigationController, close: true)
             break
+        case .ManageYourRooms:
+            let roomStoryboard = UIStoryboard(name: "Room", bundle: nil)
+            self.addingRoomVc = roomStoryboard.instantiateViewController(withIdentifier: "AddingRoomViewController") as! AddingRoomViewController
+            let navigationController = UINavigationController(rootViewController: self.addingRoomVc)
+            self.slideMenuController()?.changeMainViewController(navigationController, close: true)
+            break
         case .LogOut:
             self.closeLeft()
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -212,7 +219,9 @@ class LeftMenuTVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
         changeViewController(.Home)
     }
     
-  
+  @objc fileprivate func menuButtonTapped() {
+        self.openLeft()
+    }
     
     //MARK - Check tableview table
     

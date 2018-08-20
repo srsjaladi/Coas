@@ -351,5 +351,46 @@ class CoasAPI {
     }
     
     
+    func getAmenitiesDetails(
+        handler: @escaping (_ amenitiesList :[AmenitiesModel]?,_ error: CoasError?) -> Void
+        )
+    {
+    
+        self.alamoFireManager.request(baseUrl+getAmenitiesPath, method: .post, parameters: nil).responseJSON { response in
+            
+            let success = self.validateResponseSuccess(response)
+            
+            if (success)
+            {
+                let responseText = response.result.value! as! [AnyObject]
+                var arrItineraryLsit = [AmenitiesModel]()
+                for item in responseText
+                {
+                    let objItinerary = AmenitiesModel(json: item as AnyObject)
+                    arrItineraryLsit.append(objItinerary)
+                }
+                handler(arrItineraryLsit,nil)
+            }
+            else
+            {
+                if let value = response.result.value, let error = CoasError(object: value as AnyObject)
+                {
+                    handler(nil,error)
+                }
+                else if let errorCode = response.response?.statusCode, errorCode == ErrorCode.noInternet.rawValue
+                {
+                    let error = CoasError(errorCode: ErrorCode.noInternet)
+                    handler(nil,error)
+                    
+                } else {
+                    let error = CoasError()
+                    error.detail = "History Room Booking Details server error"
+                    handler(nil,error)
+                }
+            }
+            
+        }
+    }
+    
 }
 

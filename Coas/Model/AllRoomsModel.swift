@@ -350,6 +350,7 @@ struct AmenitiesModel
     var amenityId = ""
     var amenity = ""
     var amenityImage = ""
+    var isSelected: Bool = false
     
     init() {
         

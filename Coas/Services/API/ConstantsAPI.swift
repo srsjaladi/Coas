@@ -17,7 +17,7 @@ let getHistoryBRoomsPath = "room_book_history.php"
 let getRoomsPath = "get_rooms.php"
 let checkRoomAvailble = "check_room_available.php"
 let bookRoomPath = "book_room.php"
-
+let getAmenitiesPath = "get_amenities.php"
 
 
 
