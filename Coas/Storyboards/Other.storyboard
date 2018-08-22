@@ -85,6 +85,69 @@
             </objects>
             <point key="canvasLocation" x="2026.4000000000001" y="-219.04047976011995"/>
         </scene>
+        <!--Product Details-->
+        <scene sceneID="7Ay-DO-C7A">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailsViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7ss-Tf-G00" customClass="ProductDetailsViewController" customModule="Coas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BeD-9I-kmh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BI-4c-oBh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7ss-Tf-G00" id="wd4-BL-6MN"/>
+                                    <outlet property="delegate" destination="7ss-Tf-G00" id="ttV-eZ-tct"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-jF-gjE">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Np-Z9-r0O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="22"/>
+                                <state key="normal" title="Add to Cart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnforAddToCartclicked:" destination="7ss-Tf-G00" eventType="touchUpInside" id="MOU-5J-B9K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zau-jF-gjE" secondAttribute="trailing" id="85m-Lx-bQS"/>
+                            <constraint firstAttribute="trailing" secondItem="3BI-4c-oBh" secondAttribute="trailing" id="JLu-DY-MB8"/>
+                            <constraint firstItem="3BI-4c-oBh" firstAttribute="leading" secondItem="BeD-9I-kmh" secondAttribute="leading" id="Jat-y2-650"/>
+                            <constraint firstAttribute="bottom" secondItem="Zau-jF-gjE" secondAttribute="bottom" id="Jt0-Xs-Urm"/>
+                            <constraint firstItem="Zau-jF-gjE" firstAttribute="leading" secondItem="BeD-9I-kmh" secondAttribute="leading" id="Kgc-I8-ztX"/>
+                            <constraint firstItem="Zau-jF-gjE" firstAttribute="top" secondItem="3BI-4c-oBh" secondAttribute="bottom" id="SXN-y9-soX"/>
+                            <constraint firstItem="3BI-4c-oBh" firstAttribute="top" secondItem="BeD-9I-kmh" secondAttribute="topMargin" id="e1K-6F-wF6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZhX-WD-bCq"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Product Details" id="7Xg-sf-0gk">
+                        <barButtonItem key="leftBarButtonItem" image="backArrow" id="TF2-6m-dcF">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnBackClicked:" destination="7ss-Tf-G00" id="3Sy-ae-ZpK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnForAddtoCart" destination="Zau-jF-gjE" id="CJl-IV-B10"/>
+                        <outlet property="tblView" destination="3BI-4c-oBh" id="1XR-1e-D31"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="970-RY-FXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026" y="583"/>
+        </scene>
         <!--Booking Details-->
         <scene sceneID="qcj-8Z-1mH">
             <objects>
@@ -469,9 +532,70 @@
             </objects>
             <point key="canvasLocation" x="2757.971014492754" y="-218.47826086956525"/>
         </scene>
+        <!--Products-->
+        <scene sceneID="TzA-2M-ROD">
+            <objects>
+                <viewController storyboardIdentifier="ProductsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fv2-0s-l8S" customClass="ProductsViewController" customModule="Coas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CIr-fB-OAx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big_bg_from" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-zR-IlD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ihy-J4-IUs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iaB-nG-N92">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fv2-0s-l8S" id="mUy-1M-SgJ"/>
+                                    <outlet property="delegate" destination="Fv2-0s-l8S" id="5ev-Kx-1jm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ihy-J4-IUs" firstAttribute="bottom" secondItem="A5B-bh-Nx3" secondAttribute="bottom" id="1PT-Lo-tcP"/>
+                            <constraint firstItem="JQb-zR-IlD" firstAttribute="trailing" secondItem="A5B-bh-Nx3" secondAttribute="trailing" id="2y4-0y-nrH"/>
+                            <constraint firstItem="JQb-zR-IlD" firstAttribute="top" secondItem="A5B-bh-Nx3" secondAttribute="top" id="3ME-AU-DB5"/>
+                            <constraint firstItem="ihy-J4-IUs" firstAttribute="top" secondItem="A5B-bh-Nx3" secondAttribute="top" id="5cm-8P-eKp"/>
+                            <constraint firstItem="JQb-zR-IlD" firstAttribute="leading" secondItem="A5B-bh-Nx3" secondAttribute="leading" id="Eev-5s-srF"/>
+                            <constraint firstItem="JQb-zR-IlD" firstAttribute="bottom" secondItem="A5B-bh-Nx3" secondAttribute="bottom" id="G4Y-Mb-91q"/>
+                            <constraint firstItem="ihy-J4-IUs" firstAttribute="trailing" secondItem="A5B-bh-Nx3" secondAttribute="trailing" id="Q5x-Y8-v5V"/>
+                            <constraint firstItem="ihy-J4-IUs" firstAttribute="leading" secondItem="A5B-bh-Nx3" secondAttribute="leading" id="TZL-CV-ILa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A5B-bh-Nx3"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Products" id="t4e-LF-d6C">
+                        <barButtonItem key="leftBarButtonItem" image="backArrow" id="BZv-VN-4XN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnBackClicked:" destination="Fv2-0s-l8S" id="cFy-VJ-VzH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="btnback" destination="BZv-VN-4XN" id="4aa-nO-NKC"/>
+                        <outlet property="collectionView" destination="ihy-J4-IUs" id="5c4-ek-s4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydd-15-e8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2757.5999999999999" y="594.15292353823088"/>
+        </scene>
     </scenes>
     <resources>
         <image name="DownArrow" width="7" height="6"/>
         <image name="backArrow" width="25" height="21"/>
+        <image name="big_bg_from" width="271" height="341"/>
     </resources>
 </document>

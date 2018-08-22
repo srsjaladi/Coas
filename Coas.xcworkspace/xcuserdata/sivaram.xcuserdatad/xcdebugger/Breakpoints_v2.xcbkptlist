@@ -13,5 +13,85 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coas/Services/API/CoasAPI.swift"
+            timestampString = "556615918.84153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
+            landmarkName = "BookRoom(_:room_Id:checkin:checkout:amount:em_phone:em_name:book_type:adults:children:infants:guests:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coas/Services/API/CoasAPI.swift"
+            timestampString = "556615918.841879"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "BookRoom(_:room_Id:checkin:checkout:amount:em_phone:em_name:book_type:adults:children:infants:guests:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Coas.CoasAPI.BookRoom(Swift.String, room_Id: Swift.String, checkin: Swift.String, checkout: Swift.String, amount: Swift.String, em_phone: Swift.String, em_name: Swift.String, book_type: Swift.String, adults: Swift.String, children: Swift.String, infants: Swift.String, guests: Swift.Array&lt;Swift.AnyObject&gt;, handler: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Coas.CoasError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Coas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sivaram/MyProjects/CoasProject/Coas/Coas/Services/API/CoasAPI.swift"
+                  timestampString = "556623345.284477"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "320"
+                  endingLineNumber = "320"
+                  offsetFromSymbolStart = "2890">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Coas.CoasAPI.BookRoom(Swift.String, room_Id: Swift.String, checkin: Swift.String, checkout: Swift.String, amount: Swift.String, em_phone: Swift.String, em_name: Swift.String, book_type: Swift.String, adults: Swift.String, children: Swift.String, infants: Swift.String, guests: Swift.Array&lt;Swift.AnyObject&gt;, handler: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Coas.CoasError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Coas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sivaram/MyProjects/CoasProject/Coas/Coas/Services/API/CoasAPI.swift"
+                  timestampString = "556623345.287757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "322"
+                  endingLineNumber = "322"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coas/ViewControllers/BookingDetailsViewController.swift"
+            timestampString = "556623345.096295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "datePickerCheckOutValueChanged(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

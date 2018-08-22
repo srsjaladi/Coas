@@ -9,7 +9,7 @@
 import UIKit
 private let kReuseTableCellID = "BedRoomArrangementsTableViewCell"
 
-class AddBedRommArrangementsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class AddBedRommArrangementsVC: UIViewController,UITableViewDelegate,UITableViewDataSource,AlertBedInfoVCDelegate {
 
     @IBOutlet weak var btnBack: UIBarButtonItem!
     @IBOutlet weak var tblView: UITableView!
@@ -39,7 +39,7 @@ class AddBedRommArrangementsVC: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 60
+        return 90.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,6 +64,17 @@ class AddBedRommArrangementsVC: UIViewController,UITableViewDelegate,UITableView
     @objc func buttonClicked(sender: UIButton) {
         
         sender.isSelected = !sender.isSelected
+        let homeStoryboard = UIStoryboard(name: "Room", bundle: nil)
+        let alertVC = homeStoryboard.instantiateViewController(withIdentifier: "AlertTypeBedViewController") as! AlertTypeBedViewController
+        alertVC.delegate = self
+        alertVC.currentag = sender.tag
+        self.navigationController?.present(alertVC, animated: true)
     }
     
+     func btnOkClicked(strSingle: Int, strDouble: Int, strKing: Int, strQueen: Int, currentTag: Int)
+    {
+        let indexPath = IndexPath(row: (currentTag - 20), section: 0)
+        let cell = self.tblView.cellForRow(at: indexPath) as! BedRoomArrangementsTableViewCell?
+        cell?.lblDetails.text = "\(strSingle) SingleBeds, \(strDouble) DoubleBeds, \(strKing) KingBeds,\(strQueen) QueenBeds"
+    }
 }

@@ -82,6 +82,7 @@ UIPickerViewDelegate,UITextFieldDelegate {
         
          self.txtfldCheckIn.addTarget(self, action: #selector(BookingDetailsViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
          self.txtfldCheckOut.addTarget(self, action: #selector(BookingDetailsViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+        
        
     }
     
@@ -93,7 +94,7 @@ UIPickerViewDelegate,UITextFieldDelegate {
         
         let checkIn:Int = Int(dfmatter.date(from: self.txtfldCheckIn.text!)!.timeIntervalSince1970)
         let checkOut:Int = Int(dfmatter.date(from: self.txtfldCheckOut.text!)!.timeIntervalSince1970)
-        
+         self.tblViewConstraint.constant =  self.tblView.contentSize.height
         self.getRoomAvailbleForDates(checkin: "\(checkIn)", checkout: "\(checkOut)")
     }
     
@@ -105,8 +106,7 @@ UIPickerViewDelegate,UITextFieldDelegate {
         self.pickerView(self.adultPicker, didSelectRow: 0, inComponent: 0)
         self.pickerView(self.childsPicker, didSelectRow: 0, inComponent: 0)
         self.pickerView(self.infantsPicker, didSelectRow: 0, inComponent: 0)
-        self.checkValid()
-        
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -116,9 +116,13 @@ UIPickerViewDelegate,UITextFieldDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.tblViewConstraint.constant =  self.tblView.contentSize.height
+        self.tblViewConstraint.constant =  self.tblView.contentSize.height + 20
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.tblViewConstraint.constant =  self.tblView.contentSize.height + 20
+    }
     fileprivate func setCheckinDatePicker()
     {
         datePicker = UIDatePicker()
@@ -241,10 +245,24 @@ UIPickerViewDelegate,UITextFieldDelegate {
                 }
                 else
                 {
-                    self.isAllFilled = true
-                    let objGuestDetail = ["guest_name": nextTextNameField?.text as AnyObject, "guest_phone": nextTextPhoneNumField?.text as AnyObject]
-                    
-                    self.guestsObject.append(objGuestDetail as AnyObject)
+                    if nextTextNameField != nil
+                    {
+                        if nextTextPhoneNumField != nil
+                        {
+                            self.isAllFilled = true
+                            let objGuestDetail = ["guest_name": nextTextNameField?.text as AnyObject, "guest_phone": nextTextPhoneNumField?.text as AnyObject]
+                            
+                            self.guestsObject.append(objGuestDetail as AnyObject)
+                        }
+                        else{
+                            self.isAllFilled = false
+                        }
+                    }
+                    else
+                    {
+                        self.isAllFilled = false
+                    }
+                   
                 }
             }
         }

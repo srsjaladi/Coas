@@ -302,7 +302,7 @@ class CoasAPI {
     {
         let URLString = baseUrl+bookRoomPath
         
-        let parameters: [String: AnyObject] = [
+        let parameters: [String: Any] = [
             "user_id": userId as AnyObject,
             "room_id": room_Id as AnyObject,
             "checkin": checkin as AnyObject,

@@ -27,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ek-iP-81g">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_picture" translatesAutoresizingMaskIntoConstraints="NO" id="1Ek-iP-81g">
                         <rect key="frame" x="280" y="15" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="2XQ-c6-QvF"/>
@@ -85,4 +85,7 @@
             <point key="canvasLocation" x="65.5" y="153"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="profile_picture" width="180" height="179"/>
+    </resources>
 </document>

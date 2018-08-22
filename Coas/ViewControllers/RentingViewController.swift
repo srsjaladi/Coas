@@ -195,8 +195,8 @@ class RentingViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     func btnApplyClicked(strRange: String, strMin: String, strMax: String, strType: String) {
         self.strType = strType
-        self.strMinValue = strMin
-        self.strMaxValue = strMax
+        self.strMinValue = strMin == "" ? "0.0" : strMin
+        self.strMaxValue = strMax == "" ? "0.0" : strMax
         self.strRange =  strRange
         self.gettingAllRoomDetials(strFilter: "and (priceper\(self.strType) between \(self.strMinValue)  and \(self.strMaxValue))")
     }
